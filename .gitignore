@@ -1,0 +1,19 @@
+# Fichiers générés par le système
+.DS_Store
+Thumbs.db
+
+# Dossiers d'éditeurs (ex : Visual Studio Code, IntelliJ)
+.vscode/
+.idea/
+
+# Fichiers temporaires
+*.log
+*.swp
+*.bak
+
+# Dossiers de build (si tu utilises un outil de build comme Webpack)
+dist/
+build/
+
+# Fichiers de configuration d'environnement
+.env

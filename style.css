@@ -1,0 +1,110 @@
+/* Réinitialisation des marges et paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps du document */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Conteneur principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* En-tête */
+header {
+    background-color: #333;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Section à propos de moi */
+#about {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Section projets */
+#projects {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#projects .project {
+    margin-bottom: 20px;
+}
+
+#projects h3 {
+    font-size: 1.5rem;
+}
+
+#projects p {
+    font-size: 1rem;
+    color: #555;
+}
+
+#projects a {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+#projects a:hover {
+    text-decoration: underline;
+}
+
+/* Section contact */
+#contact {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact li {
+    margin: 10px 0;
+}
+
+#contact a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
