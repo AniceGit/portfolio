@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Lien vers Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -20,17 +23,30 @@
     <!-- À propos de moi -->
     <section id="about" class="container">
         <h2>À propos de moi</h2>
-        <p>Je suis un développeur web avec une passion pour la création de sites interactifs et fonctionnels. J'aime apprendre
-            de nouvelles technologies et résoudre des problèmes complexes avec du code. Je suis actuellement en formation Data Engineer chez Simplon.</p>
+        <div class="about-content">
+            <div class="about-text">
+            <p>Je suis un développeur web avec une passion pour la création de sites interactifs et fonctionnels. J'aime apprendre
+                de nouvelles technologies et résoudre des problèmes complexes avec du code. Je suis actuellement en formation Data Engineer chez Simplon.</p>
+            <!-- Image d'illustration -->
+        </div>
+        <div class="about-image-wrapper">
+            <img src="images/requin-mechant.png" alt="Developer Illustration" class="about-image">
+        </div>
+        </div>
     </section>
 
     <!-- Mes projets -->
     <section id="projects" class="container">
         <h2>Mes projets</h2>
         <div class="project">
-            <h3><a href="https://github.com/AniceGit/wa-tor" target="_blank">Wator - Simulation d'écosystème</a></h3>
+            <h3><a href="https://github.com/AniceGit/wa-tor" target="_blank"><i class="fas fa-puzzle-piece"></i> Wator - Simulation d'écosystème</a></h3>
             <p>Une simulation d'écosystème où des poissons et des requins interagissent selon des règles spécifiques. Ce projet montre
                 l'utilisation de la programmation orientée objet en Python.</p>
+            <!-- Icônes de technologies -->
+            <div class="tech-stack">
+                <span><i class="fab fa-python"></i> Python</span>
+                <span><i class="fab fa-github"></i> GitHub</span>
+            </div>
         </div>
         <!-- Ajoute d'autres projets ici -->
     </section>
@@ -40,9 +56,8 @@
         <h2>Contact</h2>
         <p>Retrouvez-moi sur mes profils professionnels :</p>
         <ul>
-            <li><a href="https://www.linkedin.com/in/anice-g-90933b172/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/AniceGit" target="_blank">GitHub</a></li>
-            <!-- Ajoute d'autres liens si nécessaire -->
+            <li><a href="https://www.linkedin.com/in/anice-g-90933b172/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            <li><a href="https://github.com/AniceGit" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
         </ul>
     </section>
 

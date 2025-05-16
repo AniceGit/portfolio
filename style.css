@@ -7,9 +7,10 @@
 
 /* Corps du document */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Noto Sans', sans-serif; /* Police simple et élégante */
+    background-color: #E6D1B3; /* Beige clair pour un fond doux */
+    color: #333333; /* Texte en gris foncé pour un meilleur contraste */
+    line-height: 1.6;
 }
 
 /* Conteneur principal */
@@ -21,65 +22,113 @@ body {
 
 /* En-tête */
 header {
-    background-color: #333;
-    color: white;
-    padding: 50px 0;
     text-align: center;
+    padding: 60px 0;
+    background-color: #F2B8A0; /* Rose pâle doux */
+    border-radius: 10px;
+    color: #333333; /* Texte foncé pour plus de contraste */
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #333333; /* Texte en gris foncé pour les titres */
+    margin-bottom: 10px;
 }
 
 header p {
     font-size: 1.2rem;
+    color: #333333; /* Texte plus sombre pour plus de lisibilité */
+    font-style: italic;
 }
 
-/* Section à propos de moi */
+/* À propos de moi */
 #about {
-    background-color: white;
+    background-color: #A1C6B7; /* Vert sauge pastel */
+    color: #333333; /* Texte en gris foncé pour plus de contraste */
     padding: 40px;
-    border-radius: 8px;
-    margin-top: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Section projets */
+#about h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #333333; /* Titre en gris foncé */
+    margin-bottom: 15px;
+}
+
+#about p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.7;
+}
+
+/* Mes projets */
 #projects {
-    background-color: #ffffff;
+    background-color: #B9C2B8; /* Gris vert doux */
     padding: 40px;
-    border-radius: 8px;
-    margin-top: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
 }
 
-#projects .project {
-    margin-bottom: 20px;
+#projects h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #333333; /* Titre en gris foncé */
+    font-weight: 600;
+    margin-bottom: 15px;
 }
 
-#projects h3 {
-    font-size: 1.5rem;
+.project {
+    background: #D1C6B1; /* Beige sable */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
 }
 
-#projects p {
+.project h3 {
+    font-size: 1.8rem;
+    color: #333333; /* Texte des projets en gris foncé */
+    margin-bottom: 10px;
+}
+
+.project p {
     font-size: 1rem;
-    color: #555;
+    color: #333333; /* Texte plus sombre pour plus de lisibilité */
+    line-height: 1.5;
 }
 
-#projects a {
+.project a {
+    color: #333333; /* Liens en gris foncé */
     text-decoration: none;
-    color: #0073e6;
+    font-weight: 500;
+    font-size: 1.1rem;
 }
 
-#projects a:hover {
+.project a:hover {
     text-decoration: underline;
 }
 
-/* Section contact */
+/* Contact */
 #contact {
-    background-color: white;
+    background-color: #D4A5A5; /* Rose poussiéreux */
     padding: 40px;
-    border-radius: 8px;
-    margin-top: 20px;
+    border-radius: 15px;
     text-align: center;
+    margin-top: 30px;
+}
+
+#contact h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #333333; /* Titre en gris foncé */
+    margin-bottom: 15px;
 }
 
 #contact ul {
@@ -92,8 +141,10 @@ header p {
 }
 
 #contact a {
-    color: #0073e6;
+    color: #333333; /* Liens en gris foncé */
     text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
 }
 
 #contact a:hover {
@@ -102,9 +153,113 @@ header p {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #333333; /* Fond sombre pour le footer */
     color: white;
     padding: 20px;
     text-align: center;
     margin-top: 40px;
+}
+
+footer p {
+    font-size: 1.1rem;
+}
+
+/* Section "À propos de moi" */
+.about-text {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-text p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #333;
+    max-width: 600px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image {
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section "Projets" */
+.project {
+    margin-bottom: 20px;
+}
+
+.project h3 a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.project h3 a:hover {
+    color: #F2B8A0;
+}
+
+.project .tech-stack {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.project .tech-stack span {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.project .tech-stack i {
+    margin-right: 5px;
+}
+
+.project .tech-stack span:hover {
+    color: #F2B8A0;
+}
+
+/* Icônes sociales */
+ul li a {
+    font-size: 1.6rem;
+    color: #333;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #F2B8A0;
+}
+
+ul li {
+    list-style: none;
+}
+
+.project h3 a,
+.project .tech-stack span {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.project h3 a:hover,
+.project .tech-stack span:hover {
+    color: #C97C5D; /* Couleur pastel un peu plus foncée, meilleure lisibilité */
+    cursor: pointer;
 }
