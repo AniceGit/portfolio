@@ -216,6 +216,7 @@
     border: 2px solid var(--yellow);
     margin: 140px auto 40px;
     padding: 40px;
+    scroll-margin-top: 100px; 
     }
 
     /* Bouton CTA */
@@ -314,15 +315,96 @@
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
 
+        /* Cacher le bouton burger sur desktop */
+    #burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 20px;
+    z-index: 1100;
+    }
 
+    #burger span {
+    width: 25px;
+    height: 3px;
+    background: var(--yellow);
+    border-radius: 2px;
+    transition: all 0.3s;
+    }
+
+    /* Menu caché par défaut sur mobile */
+    @media (max-width: 768px) {
+    nav#nav-menu {
+        position: fixed;
+        top: 70px; /* en dessous du header */
+        right: 0;
+        background: var(--offwhite);
+        width: 200px;
+        height: calc(100vh - 70px);
+        box-shadow: -3px 0 10px rgba(0,0,0,0.1);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    nav#nav-menu.open {
+        transform: translateX(0);
+    }
+    
+    nav#nav-menu a {
+        padding: 15px 0;
+        border-bottom: 1px solid #ddd;
+        color: var(--yellow);
+        font-weight: 700;
+    }
+    
+    /* Affiche le burger sur mobile */
+    #burger {
+        display: flex;
+    }
+    }
   </style>
+
+<script>
+    const burger = document.getElementById('burger');
+    const navMenu = document.getElementById('nav-menu');
+    
+    burger.addEventListener('click', () => {
+      const expanded = burger.getAttribute('aria-expanded') === 'true' || false;
+      burger.setAttribute('aria-expanded', !expanded);
+      navMenu.classList.toggle('open');
+    });
+    
+    // Fermer le menu quand on clique sur un lien
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        burger.setAttribute('aria-expanded', false);
+      });
+    });
+  </script>
+  
 </head>
 <body>
     <header>
         <div class="logo">Anice GUIREN</div>
-        <nav>
+        <button id="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        <nav id="nav-menu">
           <a href="#hero">Accueil</a>
-          <a href="#cv">CV</a>
+          <a href="#projets">Projets</a>
+          <a href="#cv-offset">CV</a>
           <a href="#reseaux">Réseaux</a>
           <a href="#actuellement">Actuellement</a>
         </nav>
@@ -369,7 +451,8 @@
           </div> -->
         </div>
       </section>
-    
+
+      <div id="cv-offset"></div>
       <section id="cv">
         <h2>Mon CV</h2>
         <a href="CV DATA Engineer Anice GUIREN.pdf" download="CV DATA Engineer Anice GUIREN.pdf" class="cv-link">
