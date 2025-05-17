@@ -281,17 +281,27 @@
       font-size: 16px;
       color: #1e1e1e;
     }
+    
 
     .cv-link img {
-        width: 100%;
-        max-width: 800px;
-        display: block;
-        margin: 0 auto;
-        border: 2px solid var(--yellow);
-        border-radius: 8px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: pointer;
-        }
+      width: 100%;
+      max-width: 200px;
+      display: block;
+      margin: 0 auto;
+      border: 2px solid var(--yellow);
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      height: auto;
+    }
+
+    /* Media query pour écran mobile (max 480px par exemple) */
+    @media (max-width: 480px) {
+    .cv-link img {
+        max-width: 90vw; /* 90% de la largeur viewport */
+        height: auto;
+    }
+    }
 
     .cv-link img:hover {
         transform: scale(1.05);
@@ -357,7 +367,7 @@
       <section id="cv">
         <h2>Mon CV</h2>
         <a href="CV DATA Engineer Anice GUIREN.pdf" download="CV DATA Engineer Anice GUIREN.pdf" class="cv-link">
-          <img src="CV DATA Engineer Anice GUIREN.png" alt="Aperçu du CV" style="width: 400px; height: auto; cursor: pointer; transition: transform 0.3s;"/>
+          <img src="CV DATA Engineer Anice GUIREN.png" alt="Aperçu du CV" />
         </a>
       </section>
     
