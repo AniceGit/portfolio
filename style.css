@@ -1,4 +1,4 @@
-/* Réinitialisation des marges et paddings */
+/* Général */
 * {
     margin: 0;
     padding: 0;
@@ -7,259 +7,206 @@
 
 /* Corps du document */
 body {
-    font-family: 'Noto Sans', sans-serif; /* Police simple et élégante */
-    background-color: #E6D1B3; /* Beige clair pour un fond doux */
-    color: #333333; /* Texte en gris foncé pour un meilleur contraste */
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
     line-height: 1.6;
 }
 
-/* Conteneur principal */
-.container {
-    width: 80%;
+/* Navigation */
+nav {
+    background-color: #1e3d58; /* Bleu foncé */
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px;
 }
 
-/* En-tête */
-header {
-    text-align: center;
-    padding: 60px 0;
-    background-color: #F2B8A0; /* Rose pâle doux */
-    border-radius: 10px;
-    color: #333333; /* Texte foncé pour plus de contraste */
-}
-
-header h1 {
-    font-size: 3rem;
+.logo {
+    color: #F2B8A0;
+    font-size: 2.2rem;
     font-weight: 600;
-    color: #333333; /* Texte en gris foncé pour les titres */
-    margin-bottom: 10px;
 }
 
-header p {
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #F2B8A0;
+}
+
+/* Hero Section */
+#hero {
+    background-color: #a7d8ff; /* Bleu pastel */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background-color: #A1C6B7; /* Vert pastel */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
     font-size: 1.2rem;
-    color: #333333; /* Texte plus sombre pour plus de lisibilité */
-    font-style: italic;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* À propos de moi */
-#about {
-    background-color: #A1C6B7; /* Vert sauge pastel */
-    color: #333333; /* Texte en gris foncé pour plus de contraste */
-    padding: 40px;
-    border-radius: 15px;
-    margin-top: 30px;
+.hero .btn:hover {
+    background-color: #7D9F80; /* Vert foncé */
+}
+
+/* Sections */
+.section {
+    padding: 80px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #1e3d58; /* Bleu foncé */
+}
+
+/* À propos */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.about-image img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Projets */
+.project {
+    background-color: #e1f0f1; /* Bleu très clair */
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#about h2 {
-    font-size: 2.2rem;
+.project h3 a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.6rem;
+    color: #1e3d58;
+    text-decoration: none;
     font-weight: 600;
-    text-align: center;
-    color: #333333; /* Titre en gris foncé */
-    margin-bottom: 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-#about p {
-    font-size: 1.1rem;
-    text-align: center;
-    margin-top: 10px;
-    line-height: 1.7;
-}
-
-/* Mes projets */
-#projects {
-    background-color: #B9C2B8; /* Gris vert doux */
-    padding: 40px;
-    border-radius: 15px;
-    margin-top: 30px;
-}
-
-#projects h2 {
-    font-size: 2.2rem;
-    text-align: center;
-    color: #333333; /* Titre en gris foncé */
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.project {
-    background: #D1C6B1; /* Beige sable */
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    text-align: center;
-}
-
-.project h3 {
-    font-size: 1.8rem;
-    color: #333333; /* Texte des projets en gris foncé */
-    margin-bottom: 10px;
+.project h3 a:hover {
+    color: #f2b8a0;
+    transform: scale(1.05);
 }
 
 .project p {
-    font-size: 1rem;
-    color: #333333; /* Texte plus sombre pour plus de lisibilité */
-    line-height: 1.5;
-}
-
-.project a {
-    color: #333333; /* Liens en gris foncé */
-    text-decoration: none;
-    font-weight: 500;
     font-size: 1.1rem;
-}
-
-.project a:hover {
-    text-decoration: underline;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 12px;
 }
 
 /* Contact */
-#contact {
-    background-color: #D4A5A5; /* Rose poussiéreux */
-    padding: 40px;
-    border-radius: 15px;
-    text-align: center;
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
     margin-top: 30px;
 }
 
-#contact h2 {
-    font-size: 2.2rem;
-    font-weight: 600;
-    color: #333333; /* Titre en gris foncé */
-    margin-bottom: 15px;
-}
-
-#contact ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#contact li {
-    margin: 10px 0;
-}
-
-#contact a {
-    color: #333333; /* Liens en gris foncé */
+.social-links li a {
+    font-size: 1.8rem;
+    color: #1e3d58;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
 
-#contact a:hover {
-    text-decoration: underline;
+.social-links li a:hover {
+    color: #F2B8A0;
 }
 
 /* Footer */
 footer {
-    background-color: #333333; /* Fond sombre pour le footer */
+    background-color: #1e3d58; /* Bleu foncé */
     color: white;
     padding: 20px;
     text-align: center;
-    margin-top: 40px;
 }
 
 footer p {
     font-size: 1.1rem;
 }
 
-/* Section "À propos de moi" */
-.about-text {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-text p {
-    text-align: center;
-    font-size: 1.1rem;
-    color: #333;
-    max-width: 600px;
-}
-
-.about-content p {
-    font-size: 1.1rem;
-    color: #333;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.about-image-wrapper {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-image {
-    width: 150px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Section "Projets" */
-.project {
-    margin-bottom: 20px;
-}
-
-.project h3 a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #333;
-    font-size: 1.6rem;
-    font-weight: bold;
-}
-
-.project h3 a:hover {
-    color: #F2B8A0;
-}
-
-.project .tech-stack {
-    margin-top: 10px;
-    display: flex;
-    gap: 15px;
-}
-
-.project .tech-stack span {
-    font-size: 1.2rem;
-    color: #555;
-}
-
-.project .tech-stack i {
-    margin-right: 5px;
-}
-
-.project .tech-stack span:hover {
-    color: #F2B8A0;
-}
-
-/* Icônes sociales */
-ul li a {
-    font-size: 1.6rem;
-    color: #333;
-    text-decoration: none;
-}
-
-ul li a:hover {
-    color: #F2B8A0;
-}
-
-ul li {
-    list-style: none;
-}
-
-.project h3 a,
-.project .tech-stack span {
+/* Transition au survol */
+a:hover, button:hover {
     cursor: pointer;
-    transition: color 0.2s ease;
-}
-
-.project h3 a:hover,
-.project .tech-stack span:hover {
-    color: #C97C5D; /* Couleur pastel un peu plus foncée, meilleure lisibilité */
-    cursor: pointer;
+    transform: scale(1.1);
 }

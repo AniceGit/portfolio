@@ -1,6 +1,6 @@
-// Afficher l'année actuelle dans le footer
+// Script pour afficher l'année actuelle dans le footer
 document.addEventListener('DOMContentLoaded', () => {
-    const footer = document.querySelector('footer p');
+    const yearElement = document.getElementById('year');
     const currentYear = new Date().getFullYear();
-    footer.textContent = `© ${currentYear} [Ton Nom] - Tous droits réservés`;
+    yearElement.textContent = currentYear;
 });
