@@ -373,25 +373,6 @@
     }
     }
   </style>
-
-<script>
-    const burger = document.getElementById('burger');
-    const navMenu = document.getElementById('nav-menu');
-    
-    burger.addEventListener('click', () => {
-      const expanded = burger.getAttribute('aria-expanded') === 'true' || false;
-      burger.setAttribute('aria-expanded', !expanded);
-      navMenu.classList.toggle('open');
-    });
-    
-    // Fermer le menu quand on clique sur un lien
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-        burger.setAttribute('aria-expanded', false);
-      });
-    });
-  </script>
   
 </head>
 <body>
@@ -487,4 +468,22 @@
         <p>Objectif : devenir Data Engineer, avec une appétence pour Python, SQL, Azure, Spark et la data pipeline.</p>
       </section>
 </body>
+<script>
+    const burger = document.getElementById('burger');
+    const navMenu = document.getElementById('nav-menu');
+    
+    burger.addEventListener('click', () => {
+      const expanded = burger.getAttribute('aria-expanded') === 'true' || false;
+      burger.setAttribute('aria-expanded', !expanded);
+      navMenu.classList.toggle('open');
+    });
+    
+    // Fermer le menu quand on clique sur un lien
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        burger.setAttribute('aria-expanded', false);
+      });
+    });
+  </script>
 </html>
