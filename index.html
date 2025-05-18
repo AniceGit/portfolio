@@ -6,6 +6,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio d'Anice Guiren, développeur .NET et futur data engineer.">
   <style>
     body {
       margin: 0;
@@ -64,7 +65,7 @@
       color: #222;
     }
 
-    #hero p, #actuellement p {
+    #hero p, #actuellement p , #technologies p{
       text-align: center;
       font-size: 18px;
       line-height: 1.6;
@@ -303,7 +304,7 @@
     }
 
     /* Media query pour écran mobile (max 480px par exemple) */
-    @media (max-width: 200px) {
+    @media (max-width: 480px) {
     .cv-link img {
         max-width: 90vw; /* 90% de la largeur viewport */
         height: auto;
@@ -371,7 +372,72 @@
         display: flex;
     }
     }
-  </style>
+
+    .tech-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px 0 40px;
+    }
+
+    .tech-item {
+      width: 120px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    .tech-item img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    /* tootlip technologies */
+    .tech-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .tech-item:hover {
+      transform: scale(1.05);
+    }
+
+
+    .tooltip {
+      position: absolute;
+      bottom: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff8dc;
+      color: #1e1e1e;
+      border: 2px solid var(--yellow);
+      border-radius: 12px;
+      padding: 12px 16px;
+      width: 240px;
+      max-width: 90vw;
+      white-space: normal;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      text-align: left;
+      font-family: 'Outfit', sans-serif;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .tech-item:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+
+</style>
   
 </head>
 <body>
@@ -384,6 +450,7 @@
           </button>
         <nav id="nav-menu">
           <a href="#hero">Accueil</a>
+          <a href="#technologies">Technologies</a>
           <a href="#projets">Projets</a>
           <a href="#cv-offset">CV</a>
           <a href="#reseaux">Réseaux</a>
@@ -396,6 +463,153 @@
         <p>Développeur .NET et futur Data Engineer passionné par la data et en recherche d'alternance en Data Engineering (septembre 2025).</p>
         <a href="https://github.com/AniceGit">Découvrir mes projets</a>
       </section>
+
+      <section id="technologies" ">
+        <div class="container">
+          <h2 style="text-align: center; font-size: 2rem; margin-bottom: 40px;">🧰 Technologies principales</h2>
+
+          <!-- Langages & Frameworks -->
+          <h3>Langages & Frameworks</h3>
+          <div class="tech-grid">
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /><p>Python</p>   
+            <div class="tooltip">
+            Utilisé sur le projet <strong>Wa-Tor</strong> et divers autres projets dd'analyse de données en formation
+            </div>
+            </div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" /><p>.NET / EF Core</p>
+            <div class="tooltip">
+            Employé sur divers projets fullstack chez <strong>IBM</strong>
+            </div>
+            </div>
+            <div class="tech-item"><img src="images/vuejs.png" /><p>Vue.js</p>
+            <div class="tooltip">
+            Employé sur divers projets frontend chez <strong>IBM</strong>
+            </div>
+            </div>
+            <div class="tech-item"><img src="images/bash.png" /><p>Bash</p>
+            <div class="tooltip">
+            Utilisé fréquemment sur chaque projet <strong>IBM</strong> et lors des projets <strong>Simplon</strong>
+            </div>
+            </div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" /><p>Streamlit</p>
+            <div class="tooltip">
+            Utilisé pour créer des dashboards interactifs pendant la formation chez <strong>Simplon</strong>
+            </div>
+            </div>
+          </div>
+
+          <!-- Bases de données -->
+          <h3>Bases de données</h3>
+          <div class="tech-grid">
+            <div class="tech-item"><img src="images/sql.png" /><p>SQL</p>
+            <div class="tooltip">
+            Manipulé pour la gestion de données relationnelles chez <strong>IBM</strong>
+            </div>
+            </div>
+            <div class="tech-item"><img src="images/bdd.png" /><p>Bases de données</p>
+            <div class="tooltip">
+            Manipulé pour la gestion de données relationnelles chez <strong>IBM</strong>
+            </div>
+            </div>
+          </div>
+
+          <!-- Big Data & Traitement -->
+          <h3>Big Data & Traitement de données</h3>
+          <div class="tech-grid">
+            <div class="tech-item"><img src="images/hadoop.png" /><p>Hadoop</p>
+            <div class="tooltip">
+            À venir dans la suite de la formation Data Engineer chez <strong>Simplon</strong>
+            </div>
+            </div>
+            <div class="tech-item"><img src="images/spark.png" /><p>Spark</p>
+            <div class="tooltip">
+            Prévu pour l’analyse de données distribuées en formation chez <strong>Simplon</strong>
+            </div>
+            </div>
+            <div class="tech-item"><img src="images/beautifulsoup.png"/><p>BeautifulSoup</p>
+            <div class="tooltip">
+            Sera utilisé pour le scraping HTML lors d’exercices à venir chez <strong>Simplon</strong>
+            </div>
+            </div>
+            <div class="tech-item"><img src="images/scrapy.png" /><p>Scrapy</p>
+            <div class="tooltip">
+            Prévu pour des projets de scraping avancé chez <strong>Simplon</strong>
+            </div>
+            </div>
+            <div class="tech-item"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Selenium_Logo.png" width="48"/><p>Selenium</p>
+            <div class="tooltip">
+            Exploration future pour l’automatisation de navigation web dans des projets chez <strong>Simplon</strong>
+            </div>
+            </div>
+          </div>
+
+          <!-- DevOps & Cloud -->
+          <h3>DevOps & Cloud</h3>
+          <div class="tech-grid">
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" /><p>Docker</p>
+            <div class="tooltip">
+            Sera utilisé pour le déploiement de conteneurs en formation chez <strong>Simplon</strong>
+            </div>
+            </div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" /><p>Azure</p>
+            <div class="tooltip">
+            Exploration prévue pour les services cloud Azure en formation chez <strong>Simplon</strong>
+            </div>
+            </div>
+            <div class="tech-item"><img src="images/terraform.png" width="48"/><p>Terraform</p>
+            <div class="tooltip">
+            Prévu pour l’infrastructure as code lors de la suite de la formation chez <strong>Simplon</strong>
+            </div>
+            </div>
+            <div class="tech-item"><img src="images/git.png" /><p>Git</p>
+            <div class="tooltip">
+            Utilisé pour la gestion de versions chez <strong>IBM</strong> et <strong>Simplon</strong>
+            </div>
+            </div>
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" /><p>GitHub</p>
+            <div class="tooltip">
+            Employé pour collaborer sur du code source chez <strong>IBM</strong> et <strong>Simplon</strong>
+            </div>
+            </div>
+          </div>
+
+          <!-- Systèmes d'exploitation -->
+          <h3>Systèmes d'exploitation</h3>
+          <div class="tech-grid">
+            <div class="tech-item"><img src="images/linux.png" width="48"/><p>Linux</p>
+            <div class="tooltip">
+            Utilisé en environnement de développement et pour les scripts Bash chez <strong>Simplon</strong>
+            </div>
+            </div>
+            <div class="tech-item"><img src="images/windows.png" width="48"/><p>Windows</p>
+            <div class="tooltip">
+            Employé au quotidien pour coder et tester les projets chez <strong>IBM</strong>
+            </div>
+            </div>
+          </div>
+
+          <!-- Méthodologies Agiles -->
+          <h3>Agilité & Méthodologies</h3>
+          <div class="tech-grid">
+            <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" /><p>Jira</p>
+            <div class="tooltip">
+            Utilisé pour le suivi de projet Agile chez <strong>IBM</strong>
+            </div>
+            </div>
+            <div class="tech-item"><img src="images/scrum.png" width="48"/><p>Scrum</p>
+            <div class="tooltip">
+            Méthodologie pratiquée dans les projets d’équipe chez <strong>IBM</strong> et <strong>Simplon</strong>
+            </div>
+            </div>
+            <div class="tech-item"><img src="images/kanban.png" width="48"/><p>Kanban</p>
+            <div class="tooltip">
+            Appliqué lors de la gestion de tâches en mode Agiles chez <strong>IBM</strong>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     
       <section id="projets">
         <h2>Mes Projets</h2>
@@ -486,4 +700,48 @@
       });
     });
   </script>
+  <script>
+document.querySelectorAll('.tech-item').forEach(item => {
+  const tooltip = item.querySelector('.tooltip');
+
+  item.addEventListener('mouseenter', () => {
+    // Affiche la tooltip invisible (display block, mais invisible)
+    tooltip.style.display = 'block';
+    tooltip.style.visibility = 'hidden';
+    tooltip.style.opacity = '0';
+    tooltip.style.left = '50%';
+    tooltip.style.right = 'auto';
+    tooltip.style.transform = 'translateX(-50%)';
+
+    // Force le recalcul du layout
+    const rect = tooltip.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+
+    // Ajuste la position si la bulle dépasse à gauche ou droite
+    if (rect.left < 10) {
+      tooltip.style.left = '10px';
+      tooltip.style.right = 'auto';
+      tooltip.style.transform = 'none';
+    } else if (rect.right > viewportWidth - 10) {
+      tooltip.style.left = 'auto';
+      tooltip.style.right = '10px';
+      tooltip.style.transform = 'none';
+    }
+
+    // Maintenant affiche la bulle avec opacité
+    tooltip.style.visibility = 'visible';
+    tooltip.style.opacity = '1';
+  });
+
+  item.addEventListener('mouseleave', () => {
+    tooltip.style.visibility = 'hidden';
+    tooltip.style.opacity = '0';
+    tooltip.style.display = 'none';
+    tooltip.style.left = '50%';
+    tooltip.style.right = 'auto';
+    tooltip.style.transform = 'translateX(-50%)';
+  });
+});
+
+</script>
 </html>
