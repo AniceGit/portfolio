@@ -87,52 +87,57 @@
     }
 
     .project-card {
-      background: #f9fafc;
-      padding: 25px;
-      border: 1px solid #ccc;
+      background: var(--offwhite);
+      border: 2px solid var(--black);
+      box-shadow: none;
+      padding: 20px;
       text-align: center;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
       transition: transform 0.2s, box-shadow 0.2s;
       display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 200px; /* réduit la hauteur minimale */
-        padding: 20px; /* ajuste le padding si besoin */
-        align-items: center; /* centre horizontalement tout le contenu */
-        text-align: center; /* centre le texte */
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 200px; /* augmente la hauteur pour contenir tous les éléments */
     }
 
     .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-        cursor: pointer;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
     }
 
     .project-card img {
-        margin-bottom: 15px;
-        align-self: center;
+      margin-bottom: 15px;
+      align-self: center;
     }
 
     .project-card .title {
       font-weight: 600;
       font-size: 16px;
-      color: #222;
+      color: var(--black);
       text-transform: uppercase;
+      min-height: 40px; /* force une hauteur égale pour tous les titres */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
 
     .project-card .description {
       font-size: 14px;
       color: #555;
       margin-top: 10px;
+      min-height: 80px; /* force une hauteur égale pour toutes les descriptions */
     }
 
     .project-card a {
       display: inline-block;
-      margin-top: 10px;
-      color: #007acc;
+      margin-top: auto; /* pousse le lien tout en bas */
+      color: var(--yellow);
       text-decoration: none;
       font-weight: bold;
     }
+
     /* reseaux */
     #reseaux .reseau-item {
       display: flex;
@@ -215,21 +220,6 @@
 
     #accueil a:hover {
     background: #e6b800;
-    }
-
-    /* Cards projets */
-    .project-card {
-    background: var(--offwhite);
-    border: 2px solid var(--black);
-    box-shadow: none;
-    }
-
-    .project-card .title {
-    color: var(--black);
-    }
-
-    .project-card a {
-    color: var(--yellow);
     }
 
     #contact .contact-card {
